@@ -1,0 +1,29 @@
+.nav{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #36294c;
+}
+.list{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.link{
+    text-decoration: none;
+    color: #f34f6a;
+    padding: 10px;
+    font-size: 24px;
+}
+@media screen and (max-width: 600px) {
+    .nav{
+        min-width: 100%;
+        
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,10 @@
+.main{
+  align-items: flex-start;
+}
+.label{
+  margin-right: 500px;
+  /* margin-left: 30%; */
+  margin-bottom: 7px;
+  font-size: 20px;
+  
+}

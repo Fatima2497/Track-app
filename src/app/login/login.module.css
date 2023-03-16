@@ -1,0 +1,37 @@
+.formgroup{
+    width: 300px;
+    height: 350px;
+    border-radius: 5px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 5px 15px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.form{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+}
+.text{
+    
+    font-size: 12px;
+    color: #477CE3;
+}
+.link{
+    font-size: 14px;
+    color: #477CE3;
+}
+.content{
+    margin-left: 5%;
+    text-align: left;
+}
