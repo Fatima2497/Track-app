@@ -21,7 +21,7 @@ export default function AddExercise() {
     }else{
       setInitialRender(true)
     }
-  })
+  }, [initialRender])
   const names = useRef()
   const descriptions = useRef() 
   const durations = useRef() 

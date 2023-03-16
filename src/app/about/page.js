@@ -32,7 +32,7 @@ export default function About() {
  
     }
     
-  }, [])
+  }, [list, getData])
 
   async function  getData() {
     const tokenization = localStorage.getItem('token')

@@ -12,7 +12,7 @@ export default function Home() {
     <Navbar />
     <div className={styles.main}>
     <div className={styles.imgContent}>
-    <img src='/back.jpg'  className={styles.image}/>
+    <Image src='/back.jpg' width={20} height={20} alt="back"  className={styles.image}/>
     </div>
     <div className={styles.textContent}>
     <h1 className={styles.heading}>Welcome to Exercise Tracking App</h1>
