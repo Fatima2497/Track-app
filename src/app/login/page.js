@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { Navbar } from '../components/layout/Navbar'
 import Button from '../components/ui/button/Button'
 import Input from '../components/ui/Input'
@@ -10,7 +10,7 @@ import { POST } from '../api/item/route'
 import { useRouter } from 'next/navigation';
 
 
-export default function login() {
+export default function Login() {
 
   const router = useRouter();
   const email = useRef();
