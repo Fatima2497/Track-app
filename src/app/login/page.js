@@ -49,7 +49,6 @@ export default function login() {
         </form>
         <div className={style.content}>
             <p className={style.text}>Create Account <span> <Link href='/register' className={style.link}>Sign up</Link> </span></p>
-            <p className={style.text}>Forgot Password</p>
             <Button onClick={login}>Login</Button>
           </div>
       </div>

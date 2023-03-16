@@ -1,6 +1,6 @@
 
 export async function PUT(token, id, obj){
-  const res = await fetch(`http://localhost:5000/api/activity/${id}`, {
+  const res = await fetch(`https://super-gold-chimpanzee.cyclic.app/api/activity/${id}`, {
     method: "PUT",
     headers: {
       'Content-Type': 'application/json',

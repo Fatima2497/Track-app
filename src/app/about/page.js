@@ -40,11 +40,6 @@ export default function About() {
     setList(result)
     setD(result)
     setInitialRender(true)
-    if(!list){
-      alert('you have no activity..Please add activity')
-    }else{
-      alert(`Your's Activity`)
-    }
   }
 
   const names = useRef()

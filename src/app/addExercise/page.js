@@ -47,12 +47,10 @@ export default function AddExercise() {
 
     if(names.current.value == '' || descriptions.current.value == '' || durations.current.value == ''  || dates.current.value == ''){
       alert('All Felids are required')
-    }else{
-      const result = await POST(data)
-
-      alert('Activity Added')
-      router.push("/about")
     }
+    const result = await POST(data)
+    router.push("/about")
+    
     
   }
   if (!initialRender) {

@@ -1,6 +1,6 @@
 export async function POST(activity) {
 
-  const res = await fetch('http://localhost:5000/api/activity/add', {
+  const res = await fetch('https://super-gold-chimpanzee.cyclic.app/api/activity/add', {
     method:'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -10,7 +10,14 @@ export async function POST(activity) {
   });
   const data = await res.json();
 
-  return data
+  if(res.status==200){
+    alert("Your Activity Has Been Added!")
+    const data = await res.json()
+    return null
+  }
+  else{
+    alert("Error Occurred")
+  }
 
   
 }

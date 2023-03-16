@@ -1,5 +1,5 @@
 export async function POST(request) {
-  const res = await fetch('http://localhost:5000/api/user/register',{
+  const res = await fetch('https://super-gold-chimpanzee.cyclic.app/api/user/register',{
     method:"POST",
     headers:{
       'Content-Type': 'application/json'
