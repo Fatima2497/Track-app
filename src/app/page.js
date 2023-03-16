@@ -6,6 +6,7 @@ import { Navbar } from './components/layout/Navbar'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  console.log("Page rendered")
   return (
     <>
     <Navbar />

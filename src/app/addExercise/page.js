@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Navbar } from '../components/layout/Navbar'
 import style from './add.module.css'
 import Input from '../components/ui/Input'
@@ -11,8 +11,17 @@ import { useRouter } from 'next/navigation';
 
 export default function AddExercise() {
   const router = useRouter();
-  const [activity_types,setActivity] = useState('') 
 
+  const [activity_types,setActivity] = useState('') 
+  const [initialRender, setInitialRender] = useState(false)
+
+  useEffect(()=>{
+    if (!localStorage.getItem('token')) {
+      router.push("/login")
+    }else{
+      setInitialRender(true)
+    }
+  })
   const names = useRef()
   const descriptions = useRef() 
   const durations = useRef() 
@@ -37,13 +46,17 @@ export default function AddExercise() {
     console.log(data)
 
     if(names.current.value == '' || descriptions.current.value == '' || durations.current.value == ''  || dates.current.value == ''){
-      alert('All Feilds are required')
+      alert('All Felids are required')
     }else{
       const result = await POST(data)
+
       alert('Activity Added')
       router.push("/about")
     }
     
+  }
+  if (!initialRender) {
+    return null
   }
   return (
     <>

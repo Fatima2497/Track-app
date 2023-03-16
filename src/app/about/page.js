@@ -8,22 +8,29 @@ import styles from './page.module.css'
 import { DELETE, GET } from '../api/get/route'
 import { PUT } from '../api/put/route'
 import style from './modal.module.css'
+import { useRouter } from 'next/navigation';
+
 
 export default function About() {
+  const router = useRouter();
+
   const [list, setList] = useState([])
   const [show, setShow] = useState(false) // popup for update 
   const [div, setDiv] = useState(false) // popup for delete
   const [activity_types,setActivity] = useState('') 
   const [id, setId] = useState()
   const [d, setD] = useState()
+  const [initialRender, setInitialRender] = useState(false)
 
  
   useEffect(() => {
-    
-    
+    if (!localStorage.getItem('token')) {
+      router.push("/login")
+    } else {
+
     getData()
  
- 
+    }
     
   }, [])
 
@@ -32,7 +39,13 @@ export default function About() {
     const result = await GET(tokenization)
     setList(result)
     setD(result)
-   }
+    setInitialRender(true)
+    if(!list){
+      alert('you have no activity..Please add activity')
+    }else{
+      alert(`Your's Activity`)
+    }
+  }
 
   const names = useRef()
   const descriptions = useRef() 
@@ -110,6 +123,10 @@ export default function About() {
     // console.log(result)
 
     getData()
+  }
+
+  if (!initialRender) {
+    return null
   }
   return (
     <>

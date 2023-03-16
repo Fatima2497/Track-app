@@ -26,14 +26,14 @@ export default function Register() {
     }
     
     if(fullName.current.value == '' || email.current.value == '' || password.current.value == ''){
-      alert("All Feilds Are required")
+      alert("All Felids Are required")
     }else if(email.current.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
-      alert("Email is invalid")
+      alert("Email is invalid Please Enter at least One Capital letter, Number and special character like: * ")
     }else if(password.current.value.length < 6){
       alert("Password must be 6 words")
     }else{
       const result = await POST(data)
-      alert('Registered')
+
     }
       
       // router.push('/login')

@@ -6,9 +6,16 @@ export async function POST(request) {
     },
     body: JSON.stringify(request)
   });
-
-  const data = await res.json()
-  
-
-  // return Response.json(data)
+  if(res.status == 415){
+    alert("User Already Registered")
+    return null
+  }
+  else if(res.status==200){
+    alert("Your Account Has Been Registered! Go To Login Page")
+    const data = await res.json()
+    return null
+  }
+  else{
+    alert("Error Occurred")
+  }
 }
