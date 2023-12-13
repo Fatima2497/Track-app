@@ -15,7 +15,12 @@
 }
 .textContent{
     width: 900px;
+    height: 100vh;
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-style: italic;
     background-color: #fff;
     text-align: center;
